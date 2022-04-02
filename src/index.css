@@ -1,13 +1,536 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f5fa;
+}
+.container {
+  width: 85%;
+  height: 110vh;
+  margin: 40px auto;
+  border: 7px solid #34477a;
+  border-radius: 30px;
+  display: flex;
+}
+.header {
+  width: 18%;
+  height: 100%;
+  background-color: #fff;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.headerTop {
+  display: flex;
+  align-items: center;
+}
+.zendentaLogo {
+  height: 45px;
+  width: 80%;
+  border-top-left-radius: 30px;
+}
+.menuIcon {
+  height: 20px;
+  width: 15px;
+  margin-left: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* Navigation menu */
+.navigationMenu {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+.itemMenu {
+  margin: 5px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  color: black;
+  font-size: 14px;
+}
+.itemMenu i {
+  font-size: 14px;
+}
+.itemMenu span {
+  padding: 10px;
+}
+a.active,
+.itemMenu:hover {
+  background-color: #0d53fc;
+  color: #fff;
+}
+.help {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.help span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.doctorDetailsSection {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgb(229, 225, 225);
+}
+.doctorImage {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+}
+.doctorDetailsSection #dropDown {
+  margin-left: 30px;
+  opacity: 0.6;
+  outline: none;
+  border: none;
+}
+.doctordetals {
+  margin-left: 5px;
+}
+.doctordetals .doctorName {
+  font-size: 15px;
+  font-weight: bold;
+}
+.doctordetals .doctorSpecification {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+/* pateint */
+.patientHeader {
+  width: 80%;
+  margin: 10px auto;
+}
+.patientHeader1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 0px;
+  border-bottom: 1px solid rgb(220, 216, 216);
+}
+.pheaderLeft {
+  display: flex;
+  align-items: center;
+}
+.pheaderLeft .fa-regular {
+  font-size: 18px;
+  padding: 0 5px;
+  color: #0d53fc;
+}
+.pheaderRight {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.patientName {
+  font-weight: 600;
+  font-size: 19px;
+}
+.searchIcon {
+  position: absolute;
+  left: 2%;
+}
+.pheaderRight .searchPatient {
+  height: 32px;
+  width: 200px;
+  margin-right: 20px;
+  border-radius: 20px;
+  padding: 0 30px;
+  background-color: #f2f5fa;
+  font-size: 15px;
+  outline: none;
+}
+.fa-plus {
+  background-color: #0d53fc;
+  padding: 7px;
+  margin: 0 10px;
+  color: #fff;
+  border-radius: 50%;
+}
+.fa-bell {
+  font-size: 20px;
+  opacity: 0.3;
+}
+.patientHeader2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgb(220, 216, 216);
+}
+.pHeader2Left {
+  display: flex;
+  align-items: center;
+}
+.patientList {
+  margin-right: 10px;
+  color: #0d53fc;
+  font-size: 15px;
+}
+.fa-greater-than {
+  font-size: 18px;
+  opacity: 0.4;
+}
+.patientName1 {
+  margin: 0 10px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.fa-print {
+  font-size: 13px;
+  padding: 7px;
+  background-color: #fff;
+  margin: 0 8px;
+  opacity: 0.6;
+}
+.pHeader2Right {
+  display: flex;
+  align-items: center;
+}
+.editPatient {
+  padding: 6px;
+  background-color: #fff;
+  font-size: 13px;
+  opacity: 0.7;
+}
+.fa-edit {
+  padding: 0 5px;
+  opacity: 0.6;
+}
+/* pateint details more */
+.patientDeatailsContainer {
+  display: flex;
+}
+.patientSummaryLeft {
+  width: 70%;
+}
+.patientSummaryRight {
+  width: 30%;
+}
+.patientSummaryLeft1 {
+  height: 40vh;
+  width: 95%;
+  display: flex;
+  margin: 10px auto;
+}
+.pateintDeatilsLeft {
+  width: 33%;
+  padding: 20px 0;
+  margin-right: 5px;
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pateintDeatilsRight {
+  width: 67%;
+  margin-left: 5px;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 15px;
+}
+.patientImage {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+.pateintProfileName {
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.patientEmail {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 500;
+  padding: 5px 0;
+}
+.pastUpcomming {
+  display: flex;
+
+  margin: 5px 0;
+}
+.pastUpcomming .past,
+.pastUpcomming .upComming {
+  padding: 5px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pastUpcomming .past {
+  border-right: 2px solid rgb(234, 229, 229);
+  padding-right: 30px;
+  margin-left: 20px;
+}
+.pastUpcomming .upComming {
+  padding-left: 10px;
+}
+.pastCount,
+.upCommingCount {
+  font-weight: bold;
+}
+.pastName,
+.upCommingName {
+  font-size: 14px;
+  opacity: 0.6;
+}
+.sendButton {
+  width: 90%;
+  margin: 20px auto;
+  padding: 9px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgb(235, 231, 231);
+  border-radius: 5px;
+  font-size: 16px;
+}
+.patientInfoCard {
+  width: 30%;
+  display: inline-block;
+  border-bottom: 1px solid rgb(248, 245, 245);
+  padding-bottom: 10px;
+  margin: 5px;
+}
+.pInfoName {
+  padding: 10px 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.infoDetail {
+  font-size: 12px;
+}
+.patientSummaryLeft2 {
+  width: 95%;
+  height: 47vh;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+.doctorSechedul11 {
+  display: flex;
+  background-color: #f2f5fa;
+  align-items: center;
+  width: 80%;
+  height: 30px;
+  margin-left: 15px;
+  padding-left: 20px;
+  justify-content: space-around;
+  color: gray;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.activeUpcoming {
+  background-color: #fff;
+  margin-left: -40px;
+  padding: 5px;
+  color: #0d53fc;
+  border-radius: 5px;
+}
+.doctorSechedule2 {
+  display: flex;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(230, 226, 226);
+}
+.doctorSechedule22 {
+  display: flex;
+}
+.doctorSchdulepart1 {
+  background-color: #f2f5fa;
+  height: 80%;
+  width: 95%;
+  margin: 15px auto;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.doctorSechedule21 {
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 0.9;
+}
+.doctorSechedule22 {
+  padding: 5px 8px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.arrowi {
+  padding: 0 5px;
+}
+.upCommingContent {
+  height: 20vh;
+  overflow-y: auto;
+  margin-left: 10px;
+}
+.doctortimeDateCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 14px;
+  border-radius: 5px;
+  margin: 5px auto;
+  box-shadow: 1px 2px 5px -1px rgb(244, 242, 242);
+}
+.dTime {
+  font-size: 12px;
+  opacity: 0.5;
+  padding-top: 5px;
+}
+.TreatMent,
+.dentist,
+.nurse {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.TreatMedium,
+.dentistName,
+.nurseName {
+  font-size: 15px;
+  padding-top: 5px;
+}
+.dnote {
+  display: flex;
+  color: #0d53fc;
+  font-size: 15px;
+}
+.fa-book {
+  padding: 0 5px;
+  font-size: 14px;
+}
+.patientSummaryRigh1,
+.patientSummaryRigh2 {
+  width: 100%;
+  margin: 10px auto;
+  height: 43vh;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+.notes1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+}
+.notesLeft {
+  font-weight: 600;
+}
+.notesRight {
+  color: #0d53fc;
+  font-weight: bold;
+}
+.notes2 {
+  height: 26vh;
+  background-color: #f2f5fa;
+  padding: 15px 10px;
+  position: relative;
+}
+.notesPara {
+  font-size: 14px;
+  padding: 7px 0;
+}
+.saveData {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  outline: none;
+  border: none;
+  background-color: #0d53fc;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+.notes3 {
+  margin: 10px 0;
+}
+.notes3Para {
+  font-size: 15px;
+  padding: 5px 7px;
+}
+.notes3det {
+  display: flex;
+  font-size: 14px;
+  padding: 6px 0;
+  position: relative;
+}
+.noteUser {
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #0d53fc;
+}
+.drgName {
+  font-size: 13px;
+  opacity: 0.7;
+  padding: 0 6px;
+}
+.note3Date {
+  position: absolute;
+  right: 5px;
+  opacity: 0.7;
+}
+.fileTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4px;
+  font-size: 15px;
+}
+.fileTopLeft {
+  font-weight: bold;
+  font-size: 15px;
+}
+.addFiles {
+  display: flex;
+  color: #0d53fc;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.fa-file-circle-plus {
+  padding: 0 8px;
+}
+.filespdfDet1,
+.filespdfDet2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 6px;
+  margin: 10px 0;
+  border-bottom: 1px solid rgb(224, 219, 219);
+  font-size: 14px;
+  opacity: 0.7;
+}
+.filespdfDet2Left,
+.filespdfDet1Left {
+  display: flex;
+}
+.fa-file {
+  padding: 0 5px;
+  color: gray;
+}
+.fa-trash-can {
+  padding: 0 8px;
+  color: gray;
+  cursor: pointer;
+}
+.fa-circle-arrow-down {
+  color: gray;
+  cursor: pointer;
 }
